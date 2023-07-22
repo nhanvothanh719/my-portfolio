@@ -1,0 +1,26 @@
+@mixin media-desktop {
+	@content;
+}
+
+@mixin media-midsize {
+	@media only screen and (min-width: 769px) and (max-width: 1152px) {
+		@content;
+	}
+}
+
+@mixin media-mobile {
+	@media only screen and (max-width: 768px) {
+		@content;
+	}
+}
+
+@mixin media-mobile-small {
+	@media only screen and (max-width: 534px) {
+		@content;
+	}
+}
+
+@mixin gradient-text {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

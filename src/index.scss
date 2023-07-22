@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+	box-sizing: border-box;
+
+	--background-color: #111729;
+	--text-color: #fff;
+	--underline-color: aqua;
+
+	--primary-color: #12d640;
+	--white-color: #fff;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+	outline: none;
+}
+
+input {
+	line-height: normal;
+}
+
+label,
+button {
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+ul {
+	list-style: none;
+}
