@@ -11,7 +11,7 @@ $navbar-height: 70px;
 
 @mixin navbar-item-underline($line-width) {
 	& {
-        position: relative;
+		position: relative;
 		color: var(--text-color);
 
 		&::before {
@@ -32,6 +32,25 @@ $navbar-height: 70px;
 			&:before {
 				width: $line-width;
 			}
+		}
+	}
+}
+
+@mixin active-link($line-width) {
+	& {
+		position: relative;
+		color: var(--primary-color);
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -4px;
+			height: 2px;
+			width: $line-width;
+			background-color: var(--underline-color);
+			transition: all 0.3s ease-in-out;
 		}
 	}
 }
@@ -70,19 +89,23 @@ header {
 				list-style: none;
 
 				display: flex;
-				
-                @include media-desktop {
-                    gap: min(3.5vw, 60px);
-                }
 
-                @include media-midsize {
-                    gap: 2vw;
-                }
+				@include media-desktop {
+					gap: min(3.5vw, 60px);
+				}
+
+				@include media-midsize {
+					gap: 2vw;
+				}
 
 				a {
 					@include navbar-item-underline($line-width: 50px);
 
-                    font-size: clamp(0.875rem, 0.1221rem + 1.5666vw, 1.25rem);
+					&.active {
+						@include active-link($line-width: 50px);
+					}
+
+					font-size: clamp(0.875rem, 0.1221rem + 1.5666vw, 1.25rem);
 				}
 			}
 		}
@@ -194,8 +217,12 @@ header {
 
 					li {
 						a {
-                            font-size: 25px;
+							font-size: 25px;
 							@include navbar-item-underline($line-width: 80px);
+
+							&.active {
+								@include active-link($line-width: 80px);
+							}
 						}
 					}
 				}

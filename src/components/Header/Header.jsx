@@ -1,10 +1,13 @@
 import './Header.scss';
 import logo from '../../assets/images/full_logo.png';
 import { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import menuItems from '../../constants/menuItems';
 
 const Header = () => {
 	const mobileMenuOpenColor = 'rgba(0, 0, 0, 0.7)';
 	const desktopNavbarColor = '#09203a';
+	const location = useLocation();
 
 	const [isMobile, setIsMobile] = useState(false);
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -17,16 +20,11 @@ const Header = () => {
 			setIsMobile(isMobileScreen);
 
 			if (isMobileScreen) {
-				setNavbarColor(() => {
-					if (showMobileMenu) {
-						return mobileMenuOpenColor;
-					} else {
-						return 'unset';
-					}
-				});
+				setNavbarColor(() =>
+					showMobileMenu ? mobileMenuOpenColor : 'unset',
+				);
 			} else {
 				setNavbarColor(desktopNavbarColor);
-				setShowMobileMenu(false);
 			}
 		};
 
@@ -37,7 +35,12 @@ const Header = () => {
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
-	}, []);
+	}, [showMobileMenu]);
+
+	//Close the mobile menu when navigating to a new route
+	useEffect(() => {
+		setShowMobileMenu(false);
+	}, [location]);
 
 	const openMobileMenu = () => {
 		if (isMobile) {
@@ -59,24 +62,13 @@ const Header = () => {
 
 					<nav>
 						<ul>
-							<li>
-								<a href="/">Home</a>
-							</li>
-							<li>
-								<a href="/">About</a>
-							</li>
-							<li>
-								<a href="/">Experience + Skills</a>
-							</li>
-							<li>
-								<a href="/">Projects</a>
-							</li>
-							<li>
-								<a href="/">Resume</a>
-							</li>
-							<li>
-								<a href="/">Contact</a>
-							</li>
+							{menuItems.map((item, index) => (
+								<li key={index}>
+									<NavLink exact to={item.href} activeClassName="active">
+										{item.title}
+									</NavLink>
+								</li>
+							))}
 						</ul>
 					</nav>
 				</div>
@@ -96,24 +88,13 @@ const Header = () => {
 					<div className="menu-section">
 						<nav>
 							<ul>
-								<li>
-									<a href="/">Home</a>
-								</li>
-								<li>
-									<a href="/">About</a>
-								</li>
-								<li>
-									<a href="/">Experience + Skills</a>
-								</li>
-								<li>
-									<a href="/">Projects</a>
-								</li>
-								<li>
-									<a href="/">Resume</a>
-								</li>
-								<li>
-									<a href="/">Contact</a>
-								</li>
+								{menuItems.map((item, index) => (
+									<li key={index}>
+										<NavLink exact to={item.href} activeClassName="active">
+											{item.title}
+										</NavLink>
+									</li>
+								))}
 							</ul>
 						</nav>
 					</div>
