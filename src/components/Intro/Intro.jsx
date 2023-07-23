@@ -75,20 +75,6 @@ const Intro = () => {
 					</p>
 					<div className="view-cv-button">
 						<a href="/">View my CV</a>
-						<svg
-							width="180px" height="60px"
-							viewBox="0 0 180 60"
-							className="button-border"
-						>
-						<polyline
-							points="179,1 179,59 1,59 1,1 179,1"
-							className="bg-line"
-						/>
-						<polyline
-							points="179,1 179,59 1,59 1,1 179,1"
-							className="hl-line"
-						/>
-                        </svg>
 					</div>
 				</div>
             

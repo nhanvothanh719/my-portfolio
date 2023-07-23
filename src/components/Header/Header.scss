@@ -38,13 +38,11 @@ $navbar-height: 70px;
 
 header {
 	width: 100%;
-	position: static;
+	position: fixed;
+	top: 0;
+	left: 0;
 
 	z-index: 10;
-
-	@include media-mobile {
-		position: fixed;
-	}
 
 	.normal-navbar {
 		@include media-desktop {

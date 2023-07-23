@@ -3,21 +3,30 @@ import logo from '../../assets/images/full_logo.png';
 import { useEffect, useState } from 'react';
 
 const Header = () => {
-
 	const mobileMenuOpenColor = 'rgba(0, 0, 0, 0.7)';
+	const desktopNavbarColor = '#09203a';
 
 	const [isMobile, setIsMobile] = useState(false);
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
-	const [mobileMenuColor, setMobileMenuColor] = useState('unset');
+
+	const [navbarColor, setNavbarColor] = useState(desktopNavbarColor);
 
 	useEffect(() => {
 		const handleResize = () => {
-			if (window.innerWidth < 769) {
-				setIsMobile(true);
-				showMobileMenu && setMobileMenuColor(mobileMenuOpenColor);
+			const isMobileScreen = window.innerWidth < 769;
+			setIsMobile(isMobileScreen);
+
+			if (isMobileScreen) {
+				setNavbarColor(() => {
+					if (showMobileMenu) {
+						return mobileMenuOpenColor;
+					} else {
+						return 'unset';
+					}
+				});
 			} else {
-				setIsMobile(false);
-				setMobileMenuColor('unset');
+				setNavbarColor(desktopNavbarColor);
+				setShowMobileMenu(false);
 			}
 		};
 
@@ -28,25 +37,22 @@ const Header = () => {
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
-	}, [showMobileMenu]);
-
-	useEffect(() => {
-		setShowMobileMenu(false);
-		setMobileMenuColor('unset');
-	}, [location]);
+	}, []);
 
 	const openMobileMenu = () => {
-		if (showMobileMenu) {
-			setShowMobileMenu(false);
-			setMobileMenuColor('unset');
-		} else {
-			setShowMobileMenu(true);
-			isMobile && setMobileMenuColor(mobileMenuOpenColor);
+		if (isMobile) {
+			if (showMobileMenu) {
+				setShowMobileMenu(false);
+				setNavbarColor('unset');
+			} else {
+				setShowMobileMenu(true);
+				setNavbarColor(mobileMenuOpenColor);
+			}
 		}
 	};
 
 	return (
-		<header style={{ backgroundColor: mobileMenuColor }}>
+		<header style={{ backgroundColor: navbarColor }}>
 			<div className="normal-navbar">
 				<div className="container">
 					<img src={logo} alt="my-logo" />

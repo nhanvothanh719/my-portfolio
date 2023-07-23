@@ -9,13 +9,12 @@ section.intro {
 
 		@include media-desktop {
 			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: 1fr;
 			gap: 20px;
 		}
 
 		@include media-mobile {
 			grid-template-columns: 1fr;
-			grid-template-rows: 2;
+            gap: 40px;
 		}
 	}
 
@@ -28,8 +27,13 @@ section.intro {
 
 			gap: 10%;
 
+			@include media-desktop {
+				font-size: clamp(0.8125rem, -0.0659rem + 1.8277vw, 1.25rem);
+			}
+
 			@include media-mobile {
-				gap: 20px;
+				font-size: clamp(0.78125rem, 0.4617rem + 1.3819vw, 1.125rem);
+				gap: 30px;
 				order: 0;
 			}
 
@@ -44,6 +48,10 @@ section.intro {
 
 				@include media-desktop {
 					font-size: 40px;
+				}
+
+				@include media-desktop {
+					font-size: 32px;
 				}
 
 				&:before {
@@ -96,51 +104,59 @@ section.intro {
 			}
 
 			.view-cv-button {
-				position: relative;
-                cursor: pointer;
+				padding: 10px 40px;
+				border-radius: 5px;
 
-                height: 60px;
+				display: flex;
+				text-align: center;
+
+				border: 2px solid #fff;
+
+				overflow: hidden;
+
+				cursor: pointer;
+
+				position: relative;
+
+				&::after {
+					content: '';
+					position: absolute;
+
+					width: 100%;
+					height: 0;
+
+					top: 50%;
+					left: 50%;
+
+					background: #ffffffee;
+					opacity: 0;
+
+					transform: translateX(-50%) translateY(-50%) rotate(45deg);
+                    transition: all 0.5s ease-in-out;
+
+                    z-index: -1;
+				}
+
+				&:hover {
+
+                    border-color: rgb(33 161 33);
+
+                    a {
+                        color: rgb(31, 184, 31);
+                    }
+                    
+					&::after {
+						height: 260%;
+						opacity: 1;
+					}
+				}
 
 				a {
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					text-align: center;
-					line-height: 58px;
 					text-transform: uppercase;
 
 					color: var(--white-color);
 
 					font-weight: 700;
-				}
-
-				.button-border {
-					fill: none;
-					stroke-width: 1;
-				}
-
-				.bg-line {
-					fill: #5cea5ebe;
-					stroke: #216d33;
-					transition: all 0.8s ease-in-out;
-				}
-
-				.hl-line {
-					stroke: #fff;
-					stroke-dasharray: 40 480;
-					stroke-dashoffset: 40;
-					transition: all 0.8s ease-in-out;
-				}
-
-				&:hover {
-					.bg-line {
-						fill: var(--secondary-color);
-					}
-
-					.hl-line {
-						stroke-dashoffset: -480;
-					}
 				}
 			}
 		}
@@ -151,7 +167,7 @@ section.intro {
 
 			display: flex;
 			justify-content: center;
-            align-items: center;
+			align-items: center;
 
 			@include media-mobile {
 				order: -1;
@@ -165,7 +181,7 @@ section.intro {
 				}
 
 				@include media-mobile {
-					width: 80%;
+					width: 60%;
 				}
 
 				&:nth-child(2) {
