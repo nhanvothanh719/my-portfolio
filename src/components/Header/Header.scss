@@ -36,14 +36,15 @@ $navbar-height: 70px;
 	}
 }
 
-@mixin navbar-item-hover {
-}
-
 header {
 	width: 100%;
-	position: fixed;
+	position: static;
 
 	z-index: 10;
+
+	@include media-mobile {
+		position: fixed;
+	}
 
 	.normal-navbar {
 		@include media-desktop {
@@ -83,7 +84,7 @@ header {
 				a {
 					@include navbar-item-underline($line-width: 50px);
 
-                    font-size: clamp(1rem, 0.498rem + 1.0444vw, 1.25rem);
+                    font-size: clamp(0.875rem, 0.1221rem + 1.5666vw, 1.25rem);
 				}
 			}
 		}
@@ -102,11 +103,11 @@ header {
 
 		.header-section {
 			display: flex;
-			justify-content: space-between;
+			justify-content: end;
 
 			height: $navbar-height;
 
-			margin-top: 20px;
+			padding-top: 30px;
 
 			img {
 				width: 80px;
@@ -180,7 +181,7 @@ header {
 
 				padding-block-end: 40px;
 
-				height: calc(100vh - 80px);
+				height: 100vh;
 				width: 100%;
 
 				ul {

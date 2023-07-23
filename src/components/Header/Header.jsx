@@ -1,18 +1,23 @@
 import './Header.scss';
 import logo from '../../assets/images/full_logo.png';
-import mobileLogo from '../../assets/images/mobile_logo.png';
 import { useEffect, useState } from 'react';
 
 const Header = () => {
+
+	const mobileMenuOpenColor = 'rgba(0, 0, 0, 0.7)';
+
 	const [isMobile, setIsMobile] = useState(false);
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
+	const [mobileMenuColor, setMobileMenuColor] = useState('unset');
 
 	useEffect(() => {
 		const handleResize = () => {
 			if (window.innerWidth < 769) {
 				setIsMobile(true);
+				showMobileMenu && setMobileMenuColor(mobileMenuOpenColor);
 			} else {
 				setIsMobile(false);
+				setMobileMenuColor('unset');
 			}
 		};
 
@@ -23,22 +28,25 @@ const Header = () => {
 		return () => {
 			window.removeEventListener('resize', handleResize);
 		};
-	}, []);
+	}, [showMobileMenu]);
 
 	useEffect(() => {
 		setShowMobileMenu(false);
+		setMobileMenuColor('unset');
 	}, [location]);
 
 	const openMobileMenu = () => {
 		if (showMobileMenu) {
 			setShowMobileMenu(false);
+			setMobileMenuColor('unset');
 		} else {
 			setShowMobileMenu(true);
+			isMobile && setMobileMenuColor(mobileMenuOpenColor);
 		}
 	};
 
 	return (
-		<header>
+		<header style={{ backgroundColor: mobileMenuColor }}>
 			<div className="normal-navbar">
 				<div className="container">
 					<img src={logo} alt="my-logo" />
@@ -73,7 +81,6 @@ const Header = () => {
 			>
 				<div className="container">
 					<div className="header-section">
-						<img src={mobileLogo} alt="my-logo" />
 						<div className="hamburger-button" onClick={openMobileMenu}>
 							<span className="white-line"></span>
 							<span className="white-line"></span>

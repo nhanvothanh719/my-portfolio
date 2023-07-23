@@ -24,3 +24,22 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+
+@mixin text-underline($line-width, $line-color) {
+	& {
+        position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -4px;
+			height: $line-width;
+			width: 0;
+			background-color: $line-color;
+			transition: all 0.3s ease-in-out;
+			width: 100%;
+		}
+	}
+}
