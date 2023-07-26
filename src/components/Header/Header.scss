@@ -27,7 +27,7 @@ $navbar-height: 70px;
 		}
 
 		&:hover {
-			color: var(--primary-color);
+			color: var(--light-green-color);
 
 			&:before {
 				width: $line-width;
@@ -49,7 +49,7 @@ $navbar-height: 70px;
 			bottom: -4px;
 			height: 2px;
 			width: $line-width;
-			background-color: var(--underline-color);
+			background-color: aqua;
 			transition: all 0.3s ease-in-out;
 		}
 	}
@@ -95,7 +95,7 @@ header {
 				}
 
 				@include media-midsize {
-					gap: 2vw;
+					gap: max(2vw, 30px);
 				}
 
 				a {

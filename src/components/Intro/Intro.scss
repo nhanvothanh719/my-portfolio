@@ -36,48 +36,6 @@ section.intro {
 				order: 0;
 			}
 
-			h1 {
-				font-weight: 1000;
-				line-height: 1;
-
-				position: relative;
-
-				background: linear-gradient(to right top, #0ee7e7 10%, #60c47c);
-				@include gradient-text;
-
-				@include media-desktop {
-					font-size: 40px;
-				}
-
-				@include media-desktop {
-					font-size: 32px;
-				}
-
-				&:before {
-					content: '';
-
-					position: absolute;
-					left: 0;
-					bottom: -3px;
-
-					width: 90%;
-					height: 1px;
-					background-color: var(--white-color);
-				}
-
-				&:after {
-					content: '';
-
-					position: absolute;
-					left: 0;
-					bottom: -10px;
-
-					width: 98%;
-					height: 1px;
-					background-color: var(--white-color);
-				}
-			}
-
 			h3 {
 				font-weight: 700;
 
@@ -141,7 +99,7 @@ section.intro {
                     border-color: rgb(33 161 33);
 
                     a {
-                        color: rgb(31, 184, 31);
+                        color: var(--light-green-color);
                     }
                     
 					&::after {

@@ -1,3 +1,40 @@
 @import '../../index.scss';
 @import '../../mixins';
 
+section.skills {
+
+    ul.skills-set {
+        justify-content: center;
+
+        max-width: 1200px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin: 0 auto;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            text-align: center;
+
+            margin-block: 3rem;
+            margin-inline: 3rem;
+
+            transition: all 0.3s ease-in;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            img {
+                aspect-ratio: 1/1;
+                width: 90px;
+            }
+        }
+
+    }
+}

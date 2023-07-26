@@ -37,7 +37,6 @@ const Header = () => {
 		};
 	}, [showMobileMenu]);
 
-	//Close the mobile menu when navigating to a new route
 	useEffect(() => {
 		setShowMobileMenu(false);
 	}, [location]);
