@@ -1,6 +1,14 @@
 @import '../../index.scss';
 @import '../../mixins';
 
+@property --rotate {
+	syntax: '<angle>';
+	initial-value: 132deg;
+	inherits: false;
+}
+
+$item-border-radius: 5px;
+
 section.skills {
 
     ul.skills-set {
@@ -17,6 +25,8 @@ section.skills {
         li {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
             gap: 20px;
 
             text-align: center;
@@ -26,9 +36,36 @@ section.skills {
 
             transition: all 0.3s ease-in;
 
+            border-radius: $item-border-radius;
+
+            background: var(--background-color);
+
             &:hover {
                 transform: scale(1.2);
             }
+
+            // &::before {
+			// 	content: '';
+			// 	z-index: -1;
+
+			// 	position: absolute;
+			// 	top: -1%;
+			// 	left: -0.4%;
+
+			// 	width: 100.8%;
+			// 	height: 102%;
+
+			// 	border-radius: calc($item-border-radius + 2px);
+
+			// 	background-image: linear-gradient(
+			// 		var(--rotate),
+			// 		#3FD59F,
+			// 		#3EBDB0 40%,
+			// 		#A6E14A
+			// 	);
+
+			// 	animation: spin 3s linear infinite;
+			// }
 
             img {
                 aspect-ratio: 1/1;
@@ -37,4 +74,13 @@ section.skills {
         }
 
     }
+}
+
+@keyframes spin {
+	0% {
+		--rotate: 0deg;
+	}
+	100% {
+		--rotate: 360deg;
+	}
 }
