@@ -28,19 +28,19 @@ const projectsList = [
         images: [
             {
                 src: pIsamiGiken_FrontPage,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pIsamiGiken_Slider,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pIsamiGiken_Info,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pIsamiGiken_Simulation,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             }
         ],
 		technicalStacks: ['ReactJS', 'Laravel'],
@@ -76,34 +76,34 @@ const projectsList = [
         images: [
             {
                 src: pPlanttify_FrontPage,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pPlanttify_BestSellings,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pPlanttify_Feedbacks,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pPlanttify_AboutUs,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pPlanttify_Shop,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pPlanttify_News,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pPlanttify_ContactUs,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             }
         ],
-		technicalStacks: ['HTML', 'Sass', 'JavaScript', 'Figma'],
+		technicalStacks: ['Figma', 'HTML', 'Sass', 'JavaScript'],
 		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
 		do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 		Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -132,31 +132,31 @@ const projectsList = [
         images: [
             {
                 src: pDayOff_Dashboard,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pDayOff_Chart,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pDayOff_Requests,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pDayOff_Request,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pDayOff_NewRequest,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pDayOff_Groups,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pDayOff_Login,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
         ],
 		technicalStacks: ['ReactJS', 'Redux', 'NodeJS', 'MongoDB', 'Firebase'],
@@ -188,11 +188,11 @@ const projectsList = [
         images: [
             {
                 src: pBeeHouse_FrontPage,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             },
             {
                 src: pBeeHouse_Dashboard,
-                desc: 'Lorem ipsum dolor sit amet'
+                desc: '...'
             }
         ],
 		technicalStacks: ['ReactJS', 'Laravel', 'MariaDB', 'AWS3'],
@@ -208,7 +208,7 @@ const projectsList = [
 					<i className="fab fa-github-square"></i>
 					<span>Code</span>
 				</a>
-				<a href="/" target="_blank" rel="noreferrer">
+				<a href="https://drive.google.com/file/d/1_15rAQNsZPqip3yOedUO-vhHBbU7rKhB/view?usp=sharing" target="_blank" rel="noreferrer">
 					<i className="far fa-play-circle"></i>
 					<span>Demo</span>
 				</a>

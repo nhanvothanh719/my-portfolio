@@ -6,6 +6,7 @@ import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
 import ExperienceSkillsPage from './pages/ExperienceSkillsPage';
 import ProjectsPage from './pages/ProjectsPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	return (
@@ -26,6 +27,7 @@ function App() {
 						<Route exact path="/" element={<IntroPage />} />
 					</Routes>
 				</main>
+				<Footer />
 			</BrowserRouter>
 		</>
 	);

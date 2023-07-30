@@ -74,11 +74,15 @@ const Intro = () => {
 						dive in!
 					</p>
 					<div className="view-cv-button">
-						<a href="/">View my CV</a>
+						<a
+							href="https://drive.google.com/file/d/130GzG30TRvr00o7G2uNhhvhyYe3ZZD30/view?usp=sharing"
+							target="_blank"
+							rel="noreferrer"
+						>
+							View My CV
+						</a>
 					</div>
 				</div>
-            
-                
 				<div className="section-image">
 					<img src={myImg} alt="my-image" />
 				</div>

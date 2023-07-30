@@ -39,7 +39,11 @@ section.projects {
 			background-size: cover;
 			background-repeat: no-repeat;
 
+			transition: box-shadow 0.35s ease-in-out;
+
 			&:hover {
+				box-shadow: 4px 4px 6px 0 rgb(39 186 4 / 95%), 0 6px 20px 0 rgb(69 172 0);
+
 				.project-info {
 					opacity: 0;
 				}
