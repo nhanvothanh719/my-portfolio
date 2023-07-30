@@ -1,8 +1,9 @@
 import './Header.scss';
 import logo from '../../assets/images/full_logo.png';
 import { useEffect, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import menuItems from '../../constants/menuItems';
+import { Link } from 'react-scroll';
 
 const Header = () => {
 	const mobileMenuOpenColor = 'rgba(0, 0, 0, 0.7)';
@@ -20,9 +21,7 @@ const Header = () => {
 			setIsMobile(isMobileScreen);
 
 			if (isMobileScreen) {
-				setNavbarColor(() =>
-					showMobileMenu ? mobileMenuOpenColor : 'unset',
-				);
+				setNavbarColor(() => (showMobileMenu ? mobileMenuOpenColor : 'unset'));
 			} else {
 				setNavbarColor(desktopNavbarColor);
 			}
@@ -63,9 +62,16 @@ const Header = () => {
 						<ul>
 							{menuItems.map((item, index) => (
 								<li key={index}>
-									<NavLink exact to={item.href} activeclassname="active">
+									<Link
+										to={item.href}
+										activeClass="active"
+										spy={true}
+										smooth={true}
+										offset={-70}
+										duration={500}
+									>
 										{item.title}
-									</NavLink>
+									</Link>
 								</li>
 							))}
 						</ul>
@@ -89,9 +95,16 @@ const Header = () => {
 							<ul>
 								{menuItems.map((item, index) => (
 									<li key={index}>
-										<NavLink exact to={item.href} activeclassname="active">
+										<Link
+											to={item.href}
+											activeClass="active"
+											spy={true}
+											smooth={true}
+											offset={-70}
+											duration={500}
+										>
 											{item.title}
-										</NavLink>
+										</Link>
 									</li>
 								))}
 							</ul>

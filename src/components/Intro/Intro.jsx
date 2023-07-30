@@ -50,12 +50,12 @@ const Intro = () => {
 	}, []);
 
 	return (
-		<section className="intro">
+		<section className="intro" id="intro">
 			<div className="container">
 				<div className="section-text">
 					<h1>Introduction</h1>
 					<h3>
-						I'm <strong className="change-text">{displayText}</strong>
+						{`I'm`} <strong className="change-text">{displayText}</strong>
 						<strong className="cursor">{showCursor ? '|' : ''}</strong>
 					</h3>
 					<p>
@@ -67,11 +67,13 @@ const Intro = () => {
 						!
 					</p>
 					<p>
-						Hello there! My name is <strong>Vo Thanh Nhan</strong>. I'm a
-						passionate Full Stack Developer who has a strong focus on building
-						user-friendly and efficient web applications. I'm excited to
-						showcase my journey and the projects I've been working on, so let's
-						dive in!
+						{
+							`Hello there! My name is `}<strong>Vo Thanh Nhan</strong>{`. I'm a
+							passionate Full Stack Developer who has a strong focus on building
+							user-friendly and efficient web applications. I'm excited to
+							showcase my journey and the projects I've been working on, so let's
+							dive in!`
+						}
 					</p>
 					<div className="view-cv-button">
 						<a

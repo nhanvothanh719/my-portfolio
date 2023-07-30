@@ -1,12 +1,14 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header/Header';
-import IntroPage from './pages/IntroPage';
-import ContactPage from './pages/ContactPage';
-import AboutPage from './pages/AboutPage';
-import ExperienceSkillsPage from './pages/ExperienceSkillsPage';
-import ProjectsPage from './pages/ProjectsPage';
 import Footer from './components/Footer/Footer';
+import Contact from './components/Contact/Contact';
+import About from './components/About/About';
+import Experience from './components/Experience/Experience';
+import Projects from './components/Projects/Projects';
+import Intro from './components/Intro/Intro';
+import Skills from './components/Skills/Skills';
+import { Element } from 'react-scroll';
 
 function App() {
 	return (
@@ -14,18 +16,21 @@ function App() {
 			<BrowserRouter>
 				<Header />
 				<main>
-					<Routes>
-						<Route exact path="/contact" element={<ContactPage />} />
-						<Route exact path="/about" element={<AboutPage />} />
-						<Route
-							exact
-							path="/experience-skills"
-							element={<ExperienceSkillsPage />}
-						/>
-						<Route exact path="/projects" element={<ProjectsPage />} />
-						<Route exact path="/intro" element={<Navigate to="/" />} />
-						<Route exact path="/" element={<IntroPage />} />
-					</Routes>
+					<Element name="intro">
+						<Intro />
+					</Element>
+					<Element name="experience">
+						<Experience />
+					</Element>
+					<Element name="skills">
+						<Skills />
+					</Element>
+					<Element name="project">
+						<Projects />
+					</Element>
+					<Element name="contact">
+						<Contact />
+					</Element>
 				</main>
 				<Footer />
 			</BrowserRouter>

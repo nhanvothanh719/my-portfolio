@@ -1,22 +1,22 @@
 const menuItems = [
     {
-        href: '/',
+        href: 'intro',
         title: 'Home'
     },
     {
-        href: '/about',
-        title: 'About'
+        href: 'experience',
+        title: 'Experience'
     },
     {
-        href: '/experience-skills',
-        title: 'Experience + Skills'
+        href: 'skills',
+        title: 'Skills'
     },
     {
-        href: '/projects',
+        href: 'projects',
         title: 'Projects'
     },
     {
-        href: '/contact',
+        href: 'contact',
         title: 'Contact'
     },
 ];
