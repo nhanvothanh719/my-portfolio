@@ -11,6 +11,7 @@ $navbar-height: 70px;
 
 @mixin navbar-item-underline($line-width) {
 	& {
+		text-decoration: none;
 		position: relative;
 		color: var(--text-color);
 

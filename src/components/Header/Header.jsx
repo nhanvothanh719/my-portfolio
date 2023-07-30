@@ -63,7 +63,7 @@ const Header = () => {
 						<ul>
 							{menuItems.map((item, index) => (
 								<li key={index}>
-									<NavLink exact to={item.href} activeClassName="active">
+									<NavLink exact to={item.href} activeclassname="active">
 										{item.title}
 									</NavLink>
 								</li>
@@ -89,7 +89,7 @@ const Header = () => {
 							<ul>
 								{menuItems.map((item, index) => (
 									<li key={index}>
-										<NavLink exact to={item.href} activeClassName="active">
+										<NavLink exact to={item.href} activeclassname="active">
 											{item.title}
 										</NavLink>
 									</li>
