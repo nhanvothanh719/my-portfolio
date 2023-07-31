@@ -36,7 +36,7 @@ section.experience {
 						grid-row: 1;
 					}
 
-					.moment {
+					.timestamp {
 						grid-column: 3;
 					}
 
@@ -68,7 +68,7 @@ section.experience {
 						grid-row: 1 / span 2; /* Span the .details element across two rows */
 					}
 
-					.moment {
+					.timestamp {
 						grid-column: 1;
 						grid-row: 1 / span 2;
 

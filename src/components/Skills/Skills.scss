@@ -11,8 +11,27 @@ $item-border-radius: 5px;
 
 section.skills {
 
+    .skills-section {
+        position: relative;
+
+        .top-left-img, .bottom-right-img {
+            position: absolute;
+            max-width: 13vw;
+            z-index: -1;
+        }
+
+        .top-left-img {
+            top: -20px;
+            left: 10px;
+        }
+    
+        .bottom-right-img {
+            bottom: -10vw;
+            right: 15px;
+        }
+    }
+
     ul.skills-set {
-        justify-content: center;
 
         max-width: 1200px;
 

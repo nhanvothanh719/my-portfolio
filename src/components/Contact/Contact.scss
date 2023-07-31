@@ -1,2 +1,43 @@
 @import '../../index.scss';
 @import '../../mixins';
+
+section.contact {
+
+    $border-radius: 20px;
+
+    .contact-area {
+
+        display: grid;
+
+        @include media-desktop {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @include media-mobile {
+            grid-template-columns: 1fr;
+        }
+
+        .info-section {
+            background-color: var(--light-dark-color);
+            border-radius: $border-radius;
+
+            padding: 30px 15px;
+
+            ul {
+                padding: unset;
+                list-style: none;
+
+                li {
+                    display: flex;
+                    gap: 20px;
+                }
+            }
+        }
+
+        .form-section {
+            border: 1px solid white;
+            border-radius: $border-radius;
+        }
+    }
+}

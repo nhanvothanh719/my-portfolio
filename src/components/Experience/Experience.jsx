@@ -9,6 +9,7 @@ const Experience = () => {
 					<div className="item">
 						<div className="details">
 							<h4>Title</h4>
+							<time>2020</time>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -21,14 +22,15 @@ const Experience = () => {
 						<div className="timeline">
 							<div className="timeline-marker"></div>
 						</div>
-						{/* <div className="moment">
+						<div className="moment">
 							<time>2020</time>
-						</div> */}
+						</div>
 					</div>
 
 					<div className="item">
 						<div className="details">
 							<h4>Title</h4>
+							<time>2020</time>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -41,14 +43,15 @@ const Experience = () => {
 						<div className="timeline">
 							<div className="timeline-marker"></div>
 						</div>
-						{/* <div className="moment">
+						<div className="timestamp">
 							<time>2020</time>
-						</div> */}
+						</div>
 					</div>
 
 					<div className="item">
 						<div className="details">
 							<h4>Title</h4>
+							<time>2020</time>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -61,9 +64,9 @@ const Experience = () => {
 						<div className="timeline">
 							<div className="timeline-marker"></div>
 						</div>
-						{/* <div className="moment">
+						<div className="timestamp">
 							<time>2020</time>
-						</div> */}
+						</div>
 					</div>
 				</div>
 			</div>

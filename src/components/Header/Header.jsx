@@ -6,7 +6,9 @@ import menuItems from '../../constants/menuItems';
 import { Link } from 'react-scroll';
 
 const Header = () => {
-	const mobileMenuOpenColor = 'rgba(0, 0, 0, 0.7)';
+	const scrollTimeLength = 500;
+
+	const mobileMenuOpenColor = 'rgba(0, 0, 0, 0.95)';
 	const desktopNavbarColor = '#09203a';
 	const location = useLocation();
 
@@ -52,6 +54,10 @@ const Header = () => {
 		}
 	};
 
+	const handleScroll = () => {
+		setShowMobileMenu(false);
+	};
+
 	return (
 		<header style={{ backgroundColor: navbarColor }}>
 			<div className="normal-navbar">
@@ -68,7 +74,7 @@ const Header = () => {
 										spy={true}
 										smooth={true}
 										offset={-70}
-										duration={500}
+										duration={scrollTimeLength}
 									>
 										{item.title}
 									</Link>
@@ -101,7 +107,8 @@ const Header = () => {
 											spy={true}
 											smooth={true}
 											offset={-70}
-											duration={500}
+											duration={scrollTimeLength}
+											onClick={() => handleScroll(item.href)}
 										>
 											{item.title}
 										</Link>

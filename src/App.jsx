@@ -1,14 +1,14 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
-import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
 import Intro from './components/Intro/Intro';
 import Skills from './components/Skills/Skills';
 import { Element } from 'react-scroll';
+import ParticleBackground from './components/Particles/Particles';
 
 function App() {
 	return (
@@ -16,6 +16,7 @@ function App() {
 			<BrowserRouter>
 				<Header />
 				<main>
+					<ParticleBackground />
 					<Element name="intro">
 						<Intro />
 					</Element>
