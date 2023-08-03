@@ -11,11 +11,8 @@ const Projects = () => {
 	const [imageIndex, setImageIndex] = useState(0);
 
 	useEffect(() => {
-		console.log(selectedProject);
 		setImageIndex(0);
 	}, [selectedProject]);
-
-	console.log(imageIndex);
 
 	const displayProjectDetails = (project) => {
 		setSelectedProject(project);
@@ -82,7 +79,6 @@ const Projects = () => {
 								<div className="project-images-wrapper">
 									<Carousel activeIndex={imageIndex} onSelect={selectImage}>
 										{selectedProject?.images?.map((img, index) => {
-											console.log(img);
 											return (
 												<Carousel.Item key={index}>
 													<img

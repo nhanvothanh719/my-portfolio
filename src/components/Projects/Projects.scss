@@ -14,6 +14,9 @@ $border-hover-style: 5px solid var(--primary-color);
 $active-green-color: #21ee5d;
 
 section.projects {
+
+	@include hide-particles-background; 
+
 	ul.projects-list {
 		list-style: none;
 		display: grid;
@@ -113,7 +116,7 @@ section.projects {
 				height: 100%;
 
 				opacity: 0;
-				transition: opacity $info-appear-time;
+				transition: opacity $info-appear-time ease-in-out;
 
 				background-color: rgba(0, 0, 0, 0.15);
 
@@ -131,7 +134,7 @@ section.projects {
 					aspect-ratio: 1/1;
 					width: 70px;
 
-					transition: all 0.5s ease 0s;
+					transition: all 3.5s ease;
 					z-index: 10;
 				}
 

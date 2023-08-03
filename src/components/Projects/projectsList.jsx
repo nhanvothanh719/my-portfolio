@@ -1,5 +1,8 @@
 import pBeeHouse_Dashboard from '../../assets/projects/BeeHouse/Dashboard.png';
 import pBeeHouse_FrontPage from '../../assets/projects/BeeHouse/FrontPage.png';
+import pBeeHouse_Balance from '../../assets/projects/BeeHouse/Balance.png';
+import pBeeHouse_ViewAllUsers from '../../assets/projects/BeeHouse/ViewAllUsers.png';
+
 
 import pDayOff_Chart from '../../assets/projects/DayOffManagement/Chart.png';
 import pDayOff_NewRequest from '../../assets/projects/DayOffManagement/CreateNewRequest.png';
@@ -192,6 +195,14 @@ const projectsList = [
             },
             {
                 src: pBeeHouse_Dashboard,
+                desc: '...'
+            },
+			{
+                src: pBeeHouse_Balance,
+                desc: '...'
+            },
+            {
+                src: pBeeHouse_ViewAllUsers,
                 desc: '...'
             }
         ],

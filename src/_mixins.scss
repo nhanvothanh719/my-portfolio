@@ -43,3 +43,8 @@
 		}
 	}
 }
+
+@mixin hide-particles-background($background: var(--background-color)) {
+	z-index: 0;
+	background: $background;
+}

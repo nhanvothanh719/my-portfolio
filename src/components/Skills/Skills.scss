@@ -1,105 +1,65 @@
 @import '../../index.scss';
 @import '../../mixins';
 
-@property --rotate {
-	syntax: '<angle>';
-	initial-value: 132deg;
-	inherits: false;
-}
-
 $item-border-radius: 5px;
 
 section.skills {
+	.skills-section {
+		position: relative;
 
-    .skills-section {
-        position: relative;
+		.top-left-img,
+		.bottom-right-img {
+			position: absolute;
+			max-width: 13vw;
+			z-index: -1;
+		}
 
-        .top-left-img, .bottom-right-img {
-            position: absolute;
-            max-width: 13vw;
-            z-index: -1;
-        }
+		.top-left-img {
+			top: -20px;
+			left: 10px;
+		}
 
-        .top-left-img {
-            top: -20px;
-            left: 10px;
-        }
-    
-        .bottom-right-img {
-            bottom: -10vw;
-            right: 15px;
-        }
-    }
-
-    ul.skills-set {
-
-        max-width: 1200px;
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-        margin: 0 auto;
-
-        li {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-
-            text-align: center;
-
-            margin-block: 3rem;
-            margin-inline: 3rem;
-
-            transition: all 0.3s ease-in;
-
-            border-radius: $item-border-radius;
-
-            background: var(--background-color);
-
-            &:hover {
-                transform: scale(1.2);
-            }
-
-            // &::before {
-			// 	content: '';
-			// 	z-index: -1;
-
-			// 	position: absolute;
-			// 	top: -1%;
-			// 	left: -0.4%;
-
-			// 	width: 100.8%;
-			// 	height: 102%;
-
-			// 	border-radius: calc($item-border-radius + 2px);
-
-			// 	background-image: linear-gradient(
-			// 		var(--rotate),
-			// 		#3FD59F,
-			// 		#3EBDB0 40%,
-			// 		#A6E14A
-			// 	);
-
-			// 	animation: spin 3s linear infinite;
-			// }
-
-            img {
-                aspect-ratio: 1/1;
-                width: 90px;
-            }
-        }
-
-    }
-}
-
-@keyframes spin {
-	0% {
-		--rotate: 0deg;
+		.bottom-right-img {
+			bottom: -10vw;
+			right: 15px;
+		}
 	}
-	100% {
-		--rotate: 360deg;
+
+	ul.skills-set {
+		max-width: 1200px;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		margin: 0 auto;
+
+		li {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+
+			text-align: center;
+
+			margin-block: 3rem;
+			margin-inline: 3rem;
+
+			transition: all 0.3s ease-in;
+
+			border-radius: $item-border-radius;
+
+			background: var(--background-color);
+
+			&:hover {
+				transform: scale(1.2);
+			}
+
+			img {
+				aspect-ratio: 1/1;
+				width: 90px;
+			}
+		}
 	}
 }
