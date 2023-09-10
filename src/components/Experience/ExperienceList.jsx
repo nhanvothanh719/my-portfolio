@@ -3,7 +3,7 @@ const honors = [
 		name: 'The Best Student of the Subject:',
 		list: [
 			'Software Development Life Cycle',
-			'Website Design & Development',
+			'Website Design and Development',
 			'Managing a Computing Project',
 			'Professional Practice',
 			'Networking',
@@ -46,7 +46,9 @@ const experienceList = [
 		description: (
 			<>
 				{CoNEXTWorkingExperience.map((item, index) => (
-					<p key={index}>{item}</p>
+					<p key={index}>
+						<i className="fas fa-chevron-right"></i> {item}
+					</p>
 				))}
 			</>
 		),
@@ -57,7 +59,9 @@ const experienceList = [
 		description: (
 			<>
 				{internshipExperience.map((item, index) => (
-					<p key={index}>{item}</p>
+					<p key={index}>
+						<i className="fas fa-chevron-right"></i> {item}
+					</p>
 				))}
 			</>
 		),
@@ -69,11 +73,13 @@ const experienceList = [
 			<ul>
 				<li>
 					<p>
-						<strong>Major: </strong>Information Technology
+						<i className="fas fa-anchor"></i> <strong>Major: </strong>
+						Information Technology
 					</p>
 				</li>
 				<li>
 					<p>
+						<i className="fab fa-hotjar"></i>{' '}
 						<strong>Achievements and Honors: </strong>
 					</p>
 					<ul className="honors-list">

@@ -88,9 +88,6 @@ const Projects = () => {
 														src={img.src}
 														alt={`project-image-${index}`}
 													/>
-													<Carousel.Caption>
-														<p>{img.desc}</p>
-													</Carousel.Caption>
 												</Carousel.Item>
 											);
 										})}

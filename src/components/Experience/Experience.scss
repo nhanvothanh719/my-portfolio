@@ -10,8 +10,7 @@
 $item-gap: 50px;
 
 section.experience {
-	
-	@include hide-particles-background; 
+	@include hide-particles-background;
 
 	.section-wrapper {
 		display: flex;
@@ -27,16 +26,15 @@ section.experience {
 
 			&:last-child .details {
 				position: relative;
-			
+
 				&::before {
-					content: "";
+					content: '';
 					width: 90px;
 					height: 130px;
 					background-image: url('../../assets/images/honor_icon.png');
 					background-position: center;
 					background-size: contain;
 					background-repeat: no-repeat;
-					z-index: 10;
 
 					position: absolute;
 					right: -45px;
@@ -45,19 +43,30 @@ section.experience {
 			}
 
 			.details {
+				&:hover {
+					transition: all 0.3s ease-in-out;
+					background-color: var(--dark-blue-color);
+				}
 
 				h4 {
 					color: var(--primary-color);
 					font-weight: 500;
 				}
 
+				i {
+					font-size: 17px;
+					color: var(--primary-color);
+					margin-right: 7px;
+				}
+
 				p {
 					font-size: 18px;
+					line-height: 1.5;
 				}
 
 				.honors-list {
 					list-style: square;
-					
+
 					.subjects-list {
 						list-style: circle;
 						font-size: 17px;
@@ -76,7 +85,7 @@ section.experience {
 
 			@include custom-media-midsize {
 				grid-template-columns: 75px 1fr;
-				
+
 				.timestamp {
 					display: none !important;
 				}
