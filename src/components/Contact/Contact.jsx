@@ -3,7 +3,7 @@ import * as Yup from 'yup';
 import './Contact.scss';
 import ContactImage from '../../assets/images/contact_snake.png';
 
-const userMessageSchema = Yup.object().shape({
+const messageSchema = Yup.object().shape({
 	name: Yup.string()
 		.required('Name is required!')
 		.min(2, 'Name is too short!')
@@ -79,7 +79,7 @@ const Contact = () => {
 								email: '',
 								message: '',
 							}}
-							validationSchema={userMessageSchema}
+							validationSchema={messageSchema}
 							onSubmit={handleSubmit}
 						>
 							{({ touched, errors, isSubmitting, values }) => (
@@ -106,11 +106,11 @@ const Contact = () => {
 										<Field type="email" name="email" placeholder="Email" />
 										{errors.email && touched.email ? (
 											<div className="error-message">
-												<small>{errors.email}</small>
+												<em>{errors.email}</em>
 											</div>
 										) : (
 											<div style={{ visibility: 'hidden' }}>
-												<small> No error </small>
+												<em> No error </em>
 											</div>
 										)}
 									</div>
@@ -119,21 +119,11 @@ const Contact = () => {
 										<Field as="textarea" name="message" placeholder="Message" />
 										{errors.message && touched.message ? (
 											<div className="error-message">
-												<small>{errors.message}</small>
+												<em>{errors.message}</em>
 											</div>
 										) : (
 											<div style={{ visibility: 'hidden' }}>
-												<small></small>
-											</div>
-										)}
-
-										{errors.email && touched.email ? (
-											<div className="error-message">
-												<small>{errors.email}</small>
-											</div>
-										) : (
-											<div style={{ visibility: 'hidden' }}>
-												<small> No error </small>
+												<em> No error </em>
 											</div>
 										)}
 									</div>

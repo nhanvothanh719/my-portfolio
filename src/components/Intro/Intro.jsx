@@ -62,7 +62,7 @@ const Intro = () => {
 						Welcome to my{' '}
 						<strong>
 							{' '}
-							{'<'}Full Stack Developer Portfolio{'>'}
+							{'<'}Portfolio{'>'}
 						</strong>
 						!
 					</p>
@@ -77,7 +77,7 @@ const Intro = () => {
 					</p>
 					<div className="view-cv-button">
 						<a
-							href="https://drive.google.com/file/d/130GzG30TRvr00o7G2uNhhvhyYe3ZZD30/view?usp=sharing"
+							href="https://drive.google.com/file/d/12_0RUvafejWlvd_1TuaWMHtOqh4GUOI2/view?usp=sharing"
 							target="_blank"
 							rel="noreferrer"
 						>

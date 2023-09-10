@@ -1,74 +1,29 @@
 import './Experience.scss';
+import experienceList from './ExperienceList';
 
 const Experience = () => {
 	return (
 		<section className="experience" id="experience">
 			<div className="container">
 				<h1>My Experience</h1>
-				<div className="section-wrapper">
-					<div className="item">
-						<div className="details">
-							<h4>Title</h4>
-							<time>2020</time>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-								nulla pariatur.
-							</p>
-						</div>
-						<div className="timeline">
-							<div className="timeline-marker"></div>
-						</div>
-						<div className="moment">
-							<time>2020</time>
-						</div>
-					</div>
 
-					<div className="item">
-						<div className="details">
-							<h4>Title</h4>
-							<time>2020</time>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-								nulla pariatur.
-							</p>
-						</div>
-						<div className="timeline">
-							<div className="timeline-marker"></div>
-						</div>
-						<div className="timestamp">
-							<time>2020</time>
-						</div>
-					</div>
-
-					<div className="item">
-						<div className="details">
-							<h4>Title</h4>
-							<time>2020</time>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-								enim ad minim veniam, quis nostrud exercitation ullamco laboris
-								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-								in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-								nulla pariatur.
-							</p>
-						</div>
-						<div className="timeline">
-							<div className="timeline-marker"></div>
-						</div>
-						<div className="timestamp">
-							<time>2020</time>
-						</div>
-					</div>
-				</div>
+				<ul className="section-wrapper">
+					{experienceList.map((item, index) => (
+						<li key={index} className="item">
+							<div className="details">
+								<h4>{item.title}</h4>
+								<time>{item.timeRange}</time>
+								<p>{item.description}</p>
+							</div>
+							<div className="timeline">
+								<div className="timeline-marker"></div>
+							</div>
+							<div className="timestamp">
+								<time>{item.timeRange}</time>
+							</div>
+						</li>
+					))}
+				</ul>
 			</div>
 		</section>
 	);

@@ -135,7 +135,7 @@ section.projects {
 					width: 70px;
 
 					transition: all 3.5s ease;
-					z-index: 10;
+					z-index: 5;
 				}
 
 				&::before {
@@ -143,6 +143,7 @@ section.projects {
 					left: $border-hover-position;
 
 					border-top: $border-hover-style;
+					border-top-color: #0b9d2d;
 					border-left: $border-hover-style;
 				}
 
@@ -151,6 +152,7 @@ section.projects {
 					right: $border-hover-position;
 
 					border-bottom: $border-hover-style;
+					border-bottom-color: #0b9d2d;
 					border-right: $border-hover-style;
 				}
 

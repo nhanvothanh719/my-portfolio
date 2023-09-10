@@ -3,7 +3,6 @@ import pBeeHouse_FrontPage from '../../assets/projects/BeeHouse/FrontPage.png';
 import pBeeHouse_Balance from '../../assets/projects/BeeHouse/Balance.png';
 import pBeeHouse_ViewAllUsers from '../../assets/projects/BeeHouse/ViewAllUsers.png';
 
-
 import pDayOff_Chart from '../../assets/projects/DayOffManagement/Chart.png';
 import pDayOff_NewRequest from '../../assets/projects/DayOffManagement/CreateNewRequest.png';
 import pDayOff_Dashboard from '../../assets/projects/DayOffManagement/Dashboard.png';
@@ -28,31 +27,26 @@ import pIsamiGiken_Slider from '../../assets/projects/IsamiGiken/SliderSection.p
 const projectsList = [
 	{
 		name: 'IsamiGiken',
-        images: [
-            {
-                src: pIsamiGiken_FrontPage,
-                desc: '...'
-            },
-            {
-                src: pIsamiGiken_Slider,
-                desc: '...'
-            },
-            {
-                src: pIsamiGiken_Info,
-                desc: '...'
-            },
-            {
-                src: pIsamiGiken_Simulation,
-                desc: '...'
-            }
-        ],
+		images: [
+			{
+				src: pIsamiGiken_FrontPage,
+				desc: '...',
+			},
+			{
+				src: pIsamiGiken_Slider,
+				desc: '...',
+			},
+			{
+				src: pIsamiGiken_Info,
+				desc: '...',
+			},
+			{
+				src: pIsamiGiken_Simulation,
+				desc: '...',
+			},
+		],
 		technicalStacks: ['ReactJS', 'Laravel'],
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-		do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco
-		laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-		irure dolor in reprehenderit in voluptate velit esse cillum
-		dolore eu fugiat nulla pariatur.`,
+		description: `This website was designed for IsamiGiken company which specializes in construction in Japan. `,
 		footer: (
 			<>
 				<a
@@ -76,46 +70,48 @@ const projectsList = [
 	},
 	{
 		name: 'Planttify',
-        images: [
-            {
-                src: pPlanttify_FrontPage,
-                desc: '...'
-            },
-            {
-                src: pPlanttify_BestSellings,
-                desc: '...'
-            },
-            {
-                src: pPlanttify_Feedbacks,
-                desc: '...'
-            },
-            {
-                src: pPlanttify_AboutUs,
-                desc: '...'
-            },
-            {
-                src: pPlanttify_Shop,
-                desc: '...'
-            },
-            {
-                src: pPlanttify_News,
-                desc: '...'
-            },
-            {
-                src: pPlanttify_ContactUs,
-                desc: '...'
-            }
-        ],
+		images: [
+			{
+				src: pPlanttify_FrontPage,
+				desc: '...',
+			},
+			{
+				src: pPlanttify_BestSellings,
+				desc: '...',
+			},
+			{
+				src: pPlanttify_Feedbacks,
+				desc: '...',
+			},
+			{
+				src: pPlanttify_AboutUs,
+				desc: '...',
+			},
+			{
+				src: pPlanttify_Shop,
+				desc: '...',
+			},
+			{
+				src: pPlanttify_News,
+				desc: '...',
+			},
+			{
+				src: pPlanttify_ContactUs,
+				desc: '...',
+			},
+		],
 		technicalStacks: ['Figma', 'HTML', 'Sass', 'JavaScript'],
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-		do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco
-		laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-		irure dolor in reprehenderit in voluptate velit esse cillum
-		dolore eu fugiat nulla pariatur.`,
+		description: `Following the design I had previously made in Figma, 
+		I carefully developed this website. Specifically designed for online tree shops, 
+		this platform includes numerous pages. 
+		Each page has been thoughtfully designed to ensure a cohesive and engaging online experience.`,
 		footer: (
 			<>
-				<a href="https://www.figma.com/file/Y3x243d55QIwdXDjV9IB9m/Selling-Plants?type=design&node-id=0-1&mode=design" target="_blank" rel="noreferrer">
+				<a
+					href="https://www.figma.com/file/Y3x243d55QIwdXDjV9IB9m/Selling-Plants?type=design&node-id=0-1&mode=design"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<i className="fab fa-figma"></i>
 					<span>Design</span>
 				</a>
@@ -123,7 +119,11 @@ const projectsList = [
 					<i className="fab fa-github-square"></i>
 					<span>Code</span>
 				</a>
-				<a href="http://vn-wp-nhan.gattscom.com/" target="_blank" rel="noreferrer">
+				<a
+					href="http://vn-wp-nhan.gattscom.com/"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<i className="fas fa-external-link-alt"></i>
 					<span>Live</span>
 				</a>
@@ -132,43 +132,39 @@ const projectsList = [
 	},
 	{
 		name: 'Day off management',
-        images: [
-            {
-                src: pDayOff_Dashboard,
-                desc: '...'
-            },
-            {
-                src: pDayOff_Chart,
-                desc: '...'
-            },
-            {
-                src: pDayOff_Requests,
-                desc: '...'
-            },
-            {
-                src: pDayOff_Request,
-                desc: '...'
-            },
-            {
-                src: pDayOff_NewRequest,
-                desc: '...'
-            },
-            {
-                src: pDayOff_Groups,
-                desc: '...'
-            },
-            {
-                src: pDayOff_Login,
-                desc: '...'
-            },
-        ],
+		images: [
+			{
+				src: pDayOff_Dashboard,
+				desc: '...',
+			},
+			{
+				src: pDayOff_Chart,
+				desc: '...',
+			},
+			{
+				src: pDayOff_Requests,
+				desc: '...',
+			},
+			{
+				src: pDayOff_Request,
+				desc: '...',
+			},
+			{
+				src: pDayOff_NewRequest,
+				desc: '...',
+			},
+			{
+				src: pDayOff_Groups,
+				desc: '...',
+			},
+			{
+				src: pDayOff_Login,
+				desc: '...',
+			},
+		],
 		technicalStacks: ['ReactJS', 'Redux', 'NodeJS', 'MongoDB', 'Firebase'],
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-		do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco
-		laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-		irure dolor in reprehenderit in voluptate velit esse cillum
-		dolore eu fugiat nulla pariatur.`,
+		description: `This website was developed with the main purpose of managing employee day offs and 
+		Slack channels within a company.`,
 		footer: (
 			<>
 				<a
@@ -179,7 +175,11 @@ const projectsList = [
 					<i className="fab fa-github-square"></i>
 					<span>Code</span>
 				</a>
-				<a href="https://log-off-management.netlify.app/" target="_blank" rel="noreferrer">
+				<a
+					href="https://log-off-management.netlify.app/"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<i className="fas fa-external-link-alt"></i>
 					<span>Live</span>
 				</a>
@@ -188,38 +188,39 @@ const projectsList = [
 	},
 	{
 		name: 'BeeHouse',
-        images: [
-            {
-                src: pBeeHouse_FrontPage,
-                desc: '...'
-            },
-            {
-                src: pBeeHouse_Dashboard,
-                desc: '...'
-            },
+		images: [
 			{
-                src: pBeeHouse_Balance,
-                desc: '...'
-            },
-            {
-                src: pBeeHouse_ViewAllUsers,
-                desc: '...'
-            }
-        ],
+				src: pBeeHouse_FrontPage,
+				desc: '...',
+			},
+			{
+				src: pBeeHouse_Dashboard,
+				desc: '...',
+			},
+			{
+				src: pBeeHouse_Balance,
+				desc: '...',
+			},
+			{
+				src: pBeeHouse_ViewAllUsers,
+				desc: '...',
+			},
+		],
 		technicalStacks: ['ReactJS', 'Laravel', 'MariaDB', 'AWS3'],
-		description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-		do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco
-		laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-		irure dolor in reprehenderit in voluptate velit esse cillum
-		dolore eu fugiat nulla pariatur.`,
+		description: `This web application was developed in order to replace the traditional way 
+		to manage the boarding house by assisting the landlord in managing both tenants and rooms, 
+		generating monthly invoices, and assisting the renter in making online payments.`,
 		footer: (
 			<>
 				<a href="/" target="_blank" rel="noreferrer">
 					<i className="fab fa-github-square"></i>
 					<span>Code</span>
 				</a>
-				<a href="https://drive.google.com/file/d/1_15rAQNsZPqip3yOedUO-vhHBbU7rKhB/view?usp=sharing" target="_blank" rel="noreferrer">
+				<a
+					href="https://drive.google.com/file/d/1_15rAQNsZPqip3yOedUO-vhHBbU7rKhB/view?usp=sharing"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<i className="far fa-play-circle"></i>
 					<span>Demo</span>
 				</a>

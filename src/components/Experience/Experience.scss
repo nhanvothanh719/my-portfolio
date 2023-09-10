@@ -18,18 +18,44 @@ section.experience {
 		flex-direction: column;
 		gap: $item-gap;
 
+		list-style: none;
+		padding: unset;
+
 		.item {
 			width: 100%;
 
 			display: grid;
 
+			.details {
+				h4 {
+					color: var(--primary-color);
+					font-weight: 500;
+				}
+
+				p {
+					font-size: 18px;
+				}
+			}
+
 			@include media-desktop {
 				grid-template-columns: 1fr 50px 1fr;
 				gap: 20px;
+
+				.details time {
+					display: none;
+				}
 			}
 
 			@include custom-media-midsize {
 				grid-template-columns: 75px 1fr;
+				
+				.timestamp {
+					display: none !important;
+				}
+
+				.details time {
+					display: flex;
+				}
 			}
 
 			&:nth-child(odd) {
@@ -77,6 +103,12 @@ section.experience {
 
 						display: flex;
 						justify-content: end;
+					}
+
+					.timeline-marker {
+						&::after {
+							transform: translateX(50%);
+						}
 					}
 				}
 
@@ -151,8 +183,6 @@ section.experience {
 
 						width: 110%;
 						height: 2px;
-
-						transform: translateX(50%);
 
 						top: 50%;
 						left: 0;
