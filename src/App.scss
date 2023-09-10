@@ -22,13 +22,13 @@ section {
 	margin-top: 150px;
 
 	&:not(.intro) {
-		h1 {
+		h2 {
 			margin-bottom: 80px;
 		}
 	}
 }
 
-#root h1 {
+#root h2 {
 	font-weight: 1000;
 	line-height: 1;
 
@@ -38,10 +38,6 @@ section {
 
 	background: linear-gradient(to right top, #0ee7e7 10%, #60c47c);
 	@include gradient-text;
-
-	@include media-desktop {
-		font-size: 40px;
-	}
 
 	@include media-mobile {
 		font-size: 32px;

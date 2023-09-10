@@ -5,7 +5,7 @@ const Experience = () => {
 	return (
 		<section className="experience" id="experience">
 			<div className="container">
-				<h1>My Experience</h1>
+				<h2>My Experience</h2>
 
 				<ul className="section-wrapper">
 					{experienceList.map((item, index) => (

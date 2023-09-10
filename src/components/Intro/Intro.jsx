@@ -53,7 +53,7 @@ const Intro = () => {
 		<section className="intro" id="intro">
 			<div className="container">
 				<div className="section-text">
-					<h1>Introduction</h1>
+					<h2>Introduction</h2>
 					<h3>
 						{`I'm`} <strong className="change-text">{displayText}</strong>
 						<strong className="cursor">{showCursor ? '|' : ''}</strong>

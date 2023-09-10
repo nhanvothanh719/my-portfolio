@@ -30,7 +30,7 @@ const Projects = () => {
 	return (
 		<section className="projects" id="projects">
 			<div className="container">
-				<h1>Typical Projects</h1>
+				<h2>Typical Projects</h2>
 
 				<ul className="projects-list">
 					{projectsList.map((project, index) => (

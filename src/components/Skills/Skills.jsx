@@ -6,7 +6,7 @@ const Skills = () => {
 	return (
 		<section className="skills" id="skills">
 			<div className="container">
-				<h1>My Skills</h1>
+				<h2>My Skills</h2>
 			</div>
 			<div className="skills-section">
 				<img className="top-left-img" src={dotsBackground} alt="img-bg" />
