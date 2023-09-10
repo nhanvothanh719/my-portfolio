@@ -81,11 +81,16 @@ section.experience {
 				}
 			}
 
+			.timestamp, .timestamp-details {
+				color: var(--underline-color);
+				font-weight: 500;
+			}
+
 			@include media-desktop {
 				grid-template-columns: 1fr 50px 1fr;
 				gap: 20px;
 
-				.details time {
+				.details .timestamp-details {
 					display: none;
 				}
 			}
@@ -97,7 +102,7 @@ section.experience {
 					display: none !important;
 				}
 
-				.details time {
+				.details .timestamp-details {
 					display: flex;
 				}
 			}

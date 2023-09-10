@@ -12,14 +12,14 @@ const Experience = () => {
 						<li key={index} className="item">
 							<div className="details">
 								<h4>{item.title}</h4>
-								<time>{item.timeRange}</time>
+								<span className="timestamp-details">{item.timeRange}</span>
 								<>{item.description}</>
 							</div>
 							<div className="timeline">
 								<div className="timeline-marker"></div>
 							</div>
 							<div className="timestamp">
-								<time>{item.timeRange}</time>
+								<span>{item.timeRange}</span>
 							</div>
 						</li>
 					))}
