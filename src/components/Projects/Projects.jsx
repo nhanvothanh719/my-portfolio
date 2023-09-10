@@ -46,7 +46,9 @@ const Projects = () => {
 										<li key={item_idx}>{item}</li>
 									))}
 								</ul>
-								<p className="project-description">{project.description}</p>
+								<div className="limited-lines project-description">
+									{project.description}
+								</div>
 							</div>
 
 							<div className="view-more">

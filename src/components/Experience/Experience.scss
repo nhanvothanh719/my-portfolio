@@ -23,10 +23,29 @@ section.experience {
 
 		.item {
 			width: 100%;
-
 			display: grid;
 
+			&:last-child .details {
+				position: relative;
+			
+				&::before {
+					content: "";
+					width: 90px;
+					height: 130px;
+					background-image: url('../../assets/images/honor_icon.png');
+					background-position: center;
+					background-size: contain;
+					background-repeat: no-repeat;
+					z-index: 10;
+
+					position: absolute;
+					right: -45px;
+					top: 50px;
+				}
+			}
+
 			.details {
+
 				h4 {
 					color: var(--primary-color);
 					font-weight: 500;
@@ -34,6 +53,15 @@ section.experience {
 
 				p {
 					font-size: 18px;
+				}
+
+				.honors-list {
+					list-style: square;
+					
+					.subjects-list {
+						list-style: circle;
+						font-size: 17px;
+					}
 				}
 			}
 

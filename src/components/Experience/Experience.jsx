@@ -13,7 +13,7 @@ const Experience = () => {
 							<div className="details">
 								<h4>{item.title}</h4>
 								<time>{item.timeRange}</time>
-								<p>{item.description}</p>
+								<>{item.description}</>
 							</div>
 							<div className="timeline">
 								<div className="timeline-marker"></div>

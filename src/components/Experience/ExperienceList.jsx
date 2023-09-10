@@ -76,12 +76,12 @@ const experienceList = [
 					<p>
 						<strong>Achievements and Honors: </strong>
 					</p>
-					<ul>
+					<ul className="honors-list">
 						{honors.map((item, hIndex) => (
 							<>
 								<li key={hIndex}>{item.name}</li>
 								{item.list && (
-									<ul>
+									<ul className="subjects-list">
 										{item.list.map((subject, sIndex) => (
 											<li key={sIndex}>{subject}</li>
 										))}
