@@ -21,8 +21,15 @@ section.experience {
 		padding: unset;
 
 		.item {
-			width: 100%;
 			display: grid;
+
+			@include media-desktop {
+				width: 100%;
+			}
+
+			@include media-mobile {
+				width: 95%;
+			}
 
 			&:last-child .details {
 				position: relative;

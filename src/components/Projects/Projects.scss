@@ -20,6 +20,8 @@ section.projects {
 		list-style: none;
 		display: grid;
 
+		padding-left: unset;
+
 		@include media-desktop {
 			grid-template-columns: repeat(2, 1fr);
 			gap: 30px;
@@ -27,6 +29,7 @@ section.projects {
 
 		@include media-mobile {
 			grid-template-columns: 1fr;
+			margin-inline: 40px;
 		}
 
 		li.project-item {
