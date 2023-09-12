@@ -18,8 +18,6 @@ const messageSchema = Yup.object().shape({
 
 const Contact = () => {
 	const handleSubmit = (values, { setSubmitting }) => {
-		// console.log(values);
-
 		setSubmitting(false);
 	};
 
